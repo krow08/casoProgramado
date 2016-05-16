@@ -68,17 +68,22 @@
     <Component class="javax.swing.JRadioButton" name="jrb_ArchivosPlanos">
       <Properties>
         <Property name="text" type="java.lang.String" value="Archivos Planos"/>
+        <Property name="actionCommand" type="java.lang.String" value="archivosPlanos"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jrb_BasesDatos">
       <Properties>
         <Property name="text" type="java.lang.String" value="Bases de Datos"/>
+        <Property name="actionCommand" type="java.lang.String" value="basesDatos"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jrb_XML">
       <Properties>
         <Property name="text" type="java.lang.String" value="XML"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrb_XMLActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

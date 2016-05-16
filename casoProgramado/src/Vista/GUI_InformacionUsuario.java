@@ -86,7 +86,12 @@ public class GUI_InformacionUsuario extends javax.swing.JPanel {
             }
         });
 
-        jc_Tipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jc_Tipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Usuario", "Administrador" }));
+        jc_Tipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc_TipoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -134,6 +139,10 @@ public class GUI_InformacionUsuario extends javax.swing.JPanel {
     private void jp_ContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jp_ContraseñaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jp_ContraseñaActionPerformed
+
+    private void jc_TipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc_TipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc_TipoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

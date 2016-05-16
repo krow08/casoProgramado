@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import Controlador.Controlador_FRM_FuenteInformacion;
+
 /**
  *
  * @author altna
@@ -14,10 +16,26 @@ public class FRM_FuenteInformacion extends javax.swing.JFrame {
     /**
      * Creates new form FRM_FuenteInformacion
      */
+    public Controlador_FRM_FuenteInformacion controlador;
     public FRM_FuenteInformacion() {
         initComponents();
+        controlador = new Controlador_FRM_FuenteInformacion(this);
     }
-
+    
+    public boolean archivosPlanosSeleccionado()
+    {
+     return this.jrb_ArchivosPlanos.isSelected();
+    }
+    
+    public boolean baseDatosSeleccionado()
+    {
+        return this.jrb_BasesDatos.isSelected();
+    }
+    
+    public boolean xMLSeleccionado()
+    {
+        return this.jrb_XML.isSelected();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -40,10 +58,17 @@ public class FRM_FuenteInformacion extends javax.swing.JFrame {
         jLabel2.setText("Por favor, elija la fuente de informacion con la que desea trabajar");
 
         jrb_ArchivosPlanos.setText("Archivos Planos");
+        jrb_ArchivosPlanos.setActionCommand("archivosPlanos");
 
         jrb_BasesDatos.setText("Bases de Datos");
+        jrb_BasesDatos.setActionCommand("basesDatos");
 
         jrb_XML.setText("XML");
+        jrb_XML.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrb_XMLActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,6 +102,10 @@ public class FRM_FuenteInformacion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jrb_XMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_XMLActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrb_XMLActionPerformed
 
     /**
      * @param args the command line arguments
