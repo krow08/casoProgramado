@@ -32,6 +32,7 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
         this.jm_Estudiantes.addActionListener(controlador_FRM_MenuPrincipal);
         this.jm_Cursos.addActionListener(controlador_FRM_MenuPrincipal);
         this.jm_Matricula.addActionListener(controlador_FRM_MenuPrincipal);
+        this.jm_Usuario.addActionListener(controlador_FRM_MenuPrincipal);
     }
 
     /**
@@ -55,6 +56,7 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
         jm_Estudiantes = new javax.swing.JMenuItem();
         jm_Cursos = new javax.swing.JMenuItem();
         jm_Matricula = new javax.swing.JMenuItem();
+        jm_Usuario = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -83,9 +85,12 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
         jm_Cursos.setText("Cursos");
         jm_Mantenimientos.add(jm_Cursos);
 
-        jm_Matricula.setText("Matrícula");
+        jm_Matricula.setText("Matricula");
         jm_Matricula.setActionCommand("Matricula");
         jm_Mantenimientos.add(jm_Matricula);
+
+        jm_Usuario.setText("Usuario");
+        jm_Mantenimientos.add(jm_Usuario);
 
         jm_MenuPrincipal.add(jm_Mantenimientos);
 
@@ -154,5 +159,6 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jm_Matricula;
     private javax.swing.JMenuBar jm_MenuPrincipal;
     private javax.swing.JMenuItem jm_Salir;
+    private javax.swing.JMenuItem jm_Usuario;
     // End of variables declaration//GEN-END:variables
 }

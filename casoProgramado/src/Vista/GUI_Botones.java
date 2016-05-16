@@ -7,6 +7,7 @@ package Vista;
 
 import Controlador.Controlador_FRM_MantenimientoCursos;
 import Controlador.Controlador_FRM_MantenimientoEstudiantes;
+import Controlador.Controlador_FRM_MantenimientoUsuarios;
 import Controlador.Controlador_FRM_Matricula;
 
 /**
@@ -21,6 +22,7 @@ public class GUI_Botones extends javax.swing.JPanel {
     Controlador_FRM_MantenimientoEstudiantes controlador;
     Controlador_FRM_MantenimientoCursos controladorCursos;
     Controlador_FRM_Matricula controladorMatricula;
+    Controlador_FRM_MantenimientoUsuarios Usuario;
     public GUI_Botones() {
         initComponents();
     }
@@ -43,6 +45,14 @@ public class GUI_Botones extends javax.swing.JPanel {
      public void agregarEventos(Controlador_FRM_Matricula controlador)
     {
         this.controladorMatricula=controlador;
+        this.btn_Consultar.addActionListener(controlador);
+        this.btn_Agregar.addActionListener(controlador);
+        this.btn_Modificar.addActionListener(controlador);
+        this.btn_Eliminar.addActionListener(controlador);
+    }
+       public void agregarEventos(Controlador_FRM_MantenimientoUsuarios Usuario)
+    {
+        this.Usuario=Usuario;
         this.btn_Consultar.addActionListener(controlador);
         this.btn_Agregar.addActionListener(controlador);
         this.btn_Modificar.addActionListener(controlador);
@@ -111,7 +121,7 @@ public class GUI_Botones extends javax.swing.JPanel {
                 .addComponent(btn_Modificar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_Eliminar)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +132,7 @@ public class GUI_Botones extends javax.swing.JPanel {
                     .addComponent(btn_Agregar)
                     .addComponent(btn_Modificar)
                     .addComponent(btn_Eliminar))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

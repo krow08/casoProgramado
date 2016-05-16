@@ -65,8 +65,13 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jm_Matricula">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Matr&#xed;cula"/>
+                <Property name="text" type="java.lang.String" value="Matricula"/>
                 <Property name="actionCommand" type="java.lang.String" value="Matricula"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jm_Usuario">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Usuario"/>
               </Properties>
             </MenuItem>
           </SubComponents>

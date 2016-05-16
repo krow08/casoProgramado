@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Controlador.Controlador_FRM_MantenimientoUsuarios;
 import java.beans.Statement;
 import java.sql.ResultSet;
 
@@ -13,10 +14,9 @@ import java.sql.ResultSet;
  * @author altna
  */
 public class GUI_InformacionUsuario extends javax.swing.JPanel {
-
-    /**
-     * Creates new form GUI_InformacionUsuario
-     */
+    
+    Controlador_FRM_MantenimientoUsuarios Usuario;
+   
     public GUI_InformacionUsuario() {
         initComponents();
     }

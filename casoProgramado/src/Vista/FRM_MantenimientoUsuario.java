@@ -5,18 +5,20 @@
  */
 package Vista;
 
+import Controlador.Controlador_FRM_MantenimientoUsuarios;
+
 /**
  *
  * @author altna
  */
 public class FRM_MantenimientoUsuario extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FRM_InformacionUsuario
-     */
+    Controlador_FRM_MantenimientoUsuarios Usuario;
     
     public FRM_MantenimientoUsuario() {
         initComponents();
+        this.Usuario=Usuario;
+        gUI_Botones1.agregarEventos(Usuario);
     }
 public String[] devolverInformacion()
 {
@@ -29,6 +31,10 @@ public String devolverNombreUsuario()
 public void mostrarInformacion(String arreglo[])
 {
     this.gUI_InformacionUsuario1.mostrarInformacion(arreglo);
+}
+public void resetearInterfaz()
+{
+   this.gUI_InformacionUsuario1.resetearInterfaz();
 }
     /**
      * This method is called from within the constructor to initialize the form.
