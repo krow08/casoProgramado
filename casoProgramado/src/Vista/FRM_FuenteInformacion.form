@@ -27,21 +27,24 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jrb_XML" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btn_Aceptar" min="-2" max="-2" attributes="0"/>
+                      <Component id="jrb_ArchivosPlanos" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jrb_ArchivosPlanos" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jrb_BasesDatos" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jrb_BasesDeDatos" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jl_Bienvenido" min="-2" max="-2" attributes="0"/>
+                          <Component id="jl_Instruccion" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace pref="34" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jrb_XML" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="gUI_BotonesInformacionFuente1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -49,64 +52,50 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Component id="jl_Bienvenido" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <Component id="jl_Instruccion" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jrb_ArchivosPlanos" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jrb_BasesDeDatos" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jrb_ArchivosPlanos" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jrb_BasesDatos" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jrb_XML" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btn_Aceptar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jrb_XML" min="-2" max="-2" attributes="0"/>
+                  <Component id="gUI_BotonesInformacionFuente1" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jl_Bienvenido">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xa1;Bienvenido!"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="jl_Instruccion">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Por favor, elija la fuente de informacion con la que desea trabajar"/>
+        <Property name="text" type="java.lang.String" value="Por favor elija la fuente de informacion que va a utilizar"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jrb_ArchivosPlanos">
       <Properties>
         <Property name="text" type="java.lang.String" value="Archivos Planos"/>
-        <Property name="actionCommand" type="java.lang.String" value="archivosPlanos"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jrb_BasesDatos">
+    <Component class="javax.swing.JRadioButton" name="jrb_BasesDeDatos">
       <Properties>
         <Property name="text" type="java.lang.String" value="Bases de Datos"/>
-        <Property name="actionCommand" type="java.lang.String" value="basesDatos"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jrb_XML">
       <Properties>
         <Property name="text" type="java.lang.String" value="XML"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrb_XMLActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btn_Aceptar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Aceptar"/>
-      </Properties>
+    <Component class="Vista.GUI_BotonesInformacionFuente" name="gUI_BotonesInformacionFuente1">
     </Component>
   </SubComponents>
 </Form>

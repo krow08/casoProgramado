@@ -6,6 +6,7 @@
 package Controlador;
 
 import Vista.FRM_FuenteInformacion;
+import Vista.FRM_MenuPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 /**
@@ -14,28 +15,22 @@ import java.awt.event.ActionListener;
  */
 public class Controlador_FRM_FuenteInformacion implements ActionListener {
     FRM_FuenteInformacion fuenteInfo;
+    FRM_MenuPrincipal menu;
     
     public Controlador_FRM_FuenteInformacion(FRM_FuenteInformacion fuenteInfo)
     {
-        this.fuenteInfo=new FRM_FuenteInformacion();
+       this.fuenteInfo=fuenteInfo;
     }
     
     public void actionPerformed(ActionEvent e)
     {
         if(e.getActionCommand().equals("Aceptar"))
         {
-                if(fuenteInfo.archivosPlanosSeleccionado())
-            {
-                System.out.println("1");
-            }
-            if(fuenteInfo.baseDatosSeleccionado())
-            {
-                System.out.println("2");
-            }
-            if(fuenteInfo.xMLSeleccionado())
-            {
-                System.out.println("3");
-            }
+          System.out.println("Aceptar");
+        }
+        if(e.getActionCommand().equals("Salir"))
+        {
+            System.out.println("Salir"); 
         }
     }
 }

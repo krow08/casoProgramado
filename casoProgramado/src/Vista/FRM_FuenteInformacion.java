@@ -13,34 +13,33 @@ import Controlador.Controlador_FRM_FuenteInformacion;
  */
 public class FRM_FuenteInformacion extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FRM_FuenteInformacion
-     */
-    public Controlador_FRM_FuenteInformacion controlador;
-    public FRM_FuenteInformacion() {
+  
+    public Controlador_FRM_FuenteInformacion controlador_FRM_FuenteInformacion;
+    
+    public FRM_FuenteInformacion() 
+    {
         initComponents();
-        controlador = new Controlador_FRM_FuenteInformacion(this);
-        setVisible(true);
-    }
-    public void agregarEventos(Controlador_FRM_FuenteInformacion controlador)
-    {
-        this.controlador=controlador;
-        this.btn_Aceptar.addActionListener(controlador);
-    }
-    public boolean archivosPlanosSeleccionado()
-    {
-     return this.jrb_ArchivosPlanos.isSelected();
+        controlador_FRM_FuenteInformacion=new Controlador_FRM_FuenteInformacion(this);
+       gUI_BotonesInformacionFuente1.agregarEventos(controlador_FRM_FuenteInformacion);
     }
     
-    public boolean baseDatosSeleccionado()
+
+    
+    public boolean archivosPlanosSeleccionado()
     {
-        return this.jrb_BasesDatos.isSelected();
+        return this.jrb_ArchivosPlanos.isSelected();
+    }
+    
+    public boolean basesDeDatosSeleccionado()
+    {
+        return this.jrb_BasesDeDatos.isSelected();
     }
     
     public boolean xMLSeleccionado()
     {
         return this.jrb_XML.isSelected();
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,33 +49,24 @@ public class FRM_FuenteInformacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jl_Bienvenido = new javax.swing.JLabel();
+        jl_Instruccion = new javax.swing.JLabel();
         jrb_ArchivosPlanos = new javax.swing.JRadioButton();
-        jrb_BasesDatos = new javax.swing.JRadioButton();
+        jrb_BasesDeDatos = new javax.swing.JRadioButton();
         jrb_XML = new javax.swing.JRadioButton();
-        btn_Aceptar = new javax.swing.JButton();
+        gUI_BotonesInformacionFuente1 = new Vista.GUI_BotonesInformacionFuente();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("¡Bienvenido!");
+        jl_Bienvenido.setText("¡Bienvenido!");
 
-        jLabel2.setText("Por favor, elija la fuente de informacion con la que desea trabajar");
+        jl_Instruccion.setText("Por favor elija la fuente de informacion que va a utilizar");
 
         jrb_ArchivosPlanos.setText("Archivos Planos");
-        jrb_ArchivosPlanos.setActionCommand("archivosPlanos");
 
-        jrb_BasesDatos.setText("Bases de Datos");
-        jrb_BasesDatos.setActionCommand("basesDatos");
+        jrb_BasesDeDatos.setText("Bases de Datos");
 
         jrb_XML.setText("XML");
-        jrb_XML.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jrb_XMLActionPerformed(evt);
-            }
-        });
-
-        btn_Aceptar.setText("Aceptar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,57 +76,52 @@ public class FRM_FuenteInformacion extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jrb_XML)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_Aceptar))
+                        .addComponent(jrb_ArchivosPlanos)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jrb_ArchivosPlanos)
-                            .addComponent(jrb_BasesDatos))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jrb_BasesDeDatos)
+                            .addComponent(jl_Bienvenido)
+                            .addComponent(jl_Instruccion))
+                        .addContainerGap(34, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jrb_XML)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(gUI_BotonesInformacionFuente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(jl_Bienvenido)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addComponent(jl_Instruccion)
+                .addGap(18, 18, 18)
+                .addComponent(jrb_ArchivosPlanos)
+                .addGap(18, 18, 18)
+                .addComponent(jrb_BasesDeDatos)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jrb_ArchivosPlanos)
-                        .addGap(18, 18, 18)
-                        .addComponent(jrb_BasesDatos)
-                        .addGap(18, 18, 18)
-                        .addComponent(jrb_XML)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_Aceptar)
-                        .addContainerGap())))
+                    .addComponent(jrb_XML)
+                    .addComponent(gUI_BotonesInformacionFuente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jrb_XMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_XMLActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jrb_XMLActionPerformed
-
     /**
      * @param args the command line arguments
      */
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_Aceptar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private Vista.GUI_BotonesInformacionFuente gUI_BotonesInformacionFuente1;
+    private javax.swing.JLabel jl_Bienvenido;
+    private javax.swing.JLabel jl_Instruccion;
     private javax.swing.JRadioButton jrb_ArchivosPlanos;
-    private javax.swing.JRadioButton jrb_BasesDatos;
+    private javax.swing.JRadioButton jrb_BasesDeDatos;
     private javax.swing.JRadioButton jrb_XML;
     // End of variables declaration//GEN-END:variables
 }

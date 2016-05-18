@@ -5,10 +5,12 @@
  */
 package Controlador;
 
+import Vista.FRM_FuenteInformacion;
 import Vista.FRM_MantenimientoCursos;
 import Vista.FRM_MantenimientoEstudiantes;
 import Vista.FRM_MantenimientoUsuario;
 import Vista.FRM_Matricula;
+import Vista.FRM_MenuPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -22,6 +24,8 @@ public class Controlador_FRM_MenuPrincipal implements ActionListener{
     FRM_MantenimientoCursos mantenimientoCursos;
     FRM_Matricula matricula;
     FRM_MantenimientoUsuario usurio;
+    FRM_FuenteInformacion fuenteInfo;
+    FRM_MenuPrincipal menu;
     
     public Controlador_FRM_MenuPrincipal()
     {
@@ -29,6 +33,8 @@ public class Controlador_FRM_MenuPrincipal implements ActionListener{
         mantenimientoCursos=new FRM_MantenimientoCursos();
         matricula= new FRM_Matricula(mantenimientoEstudiantes,mantenimientoCursos);
         usurio= new FRM_MantenimientoUsuario();
+        fuenteInfo= new FRM_FuenteInformacion();
+        fuenteInfo.setVisible(true);
     }
     
     public void actionPerformed(ActionEvent e)
