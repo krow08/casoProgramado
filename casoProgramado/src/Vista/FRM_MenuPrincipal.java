@@ -18,12 +18,12 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
      */
     
     Controlador_FRM_MenuPrincipal controlador_FRM_MenuPrincipal;
-    
+           FRM_FuenteInformacion fuenteInfo;
     public FRM_MenuPrincipal() {
         initComponents();
         this.setLocation(100, 100);
         controlador_FRM_MenuPrincipal = new Controlador_FRM_MenuPrincipal();
-        
+
         agregarEventos();
     }  
     public void agregarEventos()
