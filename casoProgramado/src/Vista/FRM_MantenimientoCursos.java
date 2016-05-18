@@ -6,6 +6,7 @@
 package Vista;
 
 import Controlador.Controlador_FRM_MantenimientoCursos;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -67,6 +68,11 @@ public class FRM_MantenimientoCursos extends javax.swing.JFrame {
     {
         limpiarCampos();
         estadoInicial();
+    }
+    
+    public void mostrarMensaje(String mensaje)
+    {
+        JOptionPane.showMessageDialog(null, mensaje);
     }
         
     /**
