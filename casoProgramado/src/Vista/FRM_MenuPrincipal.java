@@ -26,7 +26,20 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
         this.setLocation(100, 100);
         controlador_FRM_MenuPrincipal = new Controlador_FRM_MenuPrincipal();
         agregarEventos();
+        fuenteInfo=new FRM_FuenteInformacion();
     }  
+    
+    public void habilitarfuente()
+    {
+        if(this.isVisible()==true)
+        {
+            this.fuenteInfo.setVisible(false);
+        }
+        else
+        {
+            this.fuenteInfo.setVisible(true);
+        }
+    }
     
     public void agregarEventos()
     {
@@ -37,13 +50,6 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
         this.jm_Usuario.addActionListener(controlador_FRM_MenuPrincipal);
     }
     
-    public void visible(boolean visible)
-    {
-        if(visible==true);
-        {
-
-        }
-     }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -39,8 +39,6 @@ public class Controlador_FRM_MantenimientoEstudiantes implements ActionListener{
             metodos.agregarEstudiante(mantenimientoEstudiantes.devolverInformacion());
             metodos.mostrarInformacion();    
             mantenimientoEstudiantes.posicionInicial();
-           
- 
         }
         if(e.getActionCommand().equals("Modificar"))
         {

@@ -20,17 +20,48 @@ public class Controlador_FRM_FuenteInformacion implements ActionListener {
     public Controlador_FRM_FuenteInformacion(FRM_FuenteInformacion fuenteInfo)
     {
        this.fuenteInfo=fuenteInfo;
+       
     }
     public void actionPerformed(ActionEvent e)
     {
+        fuenteInfo=new FRM_FuenteInformacion();
         if(e.getActionCommand().equals("Aceptar"))
         {
-            menu =new FRM_MenuPrincipal();
-            menu.setVisible(true);
+            if(fuenteInfo.archivosPlanosSeleccionado()==true)
+              {
+                    menu =new FRM_MenuPrincipal();
+                    menu.setVisible(true);
+              }
+            if(fuenteInfo.xMLSeleccionado()==true)
+             {
+            
+             }
+            if(fuenteInfo.basesDeDatosSeleccionado()==true)
+            {
+            
+            }
         }
         if(e.getActionCommand().equals("Salir"))
         {
            System.exit(0);
         }
     }
+    
+    public void seleccion()
+    {
+        fuenteInfo=new FRM_FuenteInformacion();
+        if(fuenteInfo.archivosPlanosSeleccionado()==true)
+        {
+            
+        }
+        if(fuenteInfo.xMLSeleccionado()==true)
+        {
+            
+        }
+        if(fuenteInfo.basesDeDatosSeleccionado()==true)
+        {
+            
+        }
+    }
+    
 }

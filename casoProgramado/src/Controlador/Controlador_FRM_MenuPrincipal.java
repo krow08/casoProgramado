@@ -34,9 +34,22 @@ public class Controlador_FRM_MenuPrincipal implements ActionListener{
         matricula= new FRM_Matricula(mantenimientoEstudiantes,mantenimientoCursos);
         usurio= new FRM_MantenimientoUsuario();
         fuenteInfo= new FRM_FuenteInformacion();
-        fuenteInfo.setVisible(true);
-        
+        menu=new FRM_MenuPrincipal();
+       menu.habilitarfuente();
+       //habilitarFuenteInfo();
     }
+    
+  /*public void habilitarFuenteInfo()
+    {
+        if (this.menu.isVisible()==false)
+        {
+            this.fuenteInfo.setVisible(true);
+        }
+        else
+        {
+            this.fuenteInfo.setVisible(false);
+        }
+    }*/
  
     public void actionPerformed(ActionEvent e)
     {

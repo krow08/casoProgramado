@@ -49,6 +49,7 @@ public class FRM_FuenteInformacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btn_Grupo = new javax.swing.ButtonGroup();
         jl_Bienvenido = new javax.swing.JLabel();
         jl_Instruccion = new javax.swing.JLabel();
         jrb_ArchivosPlanos = new javax.swing.JRadioButton();
@@ -67,10 +68,18 @@ public class FRM_FuenteInformacion extends javax.swing.JFrame {
 
         jl_Instruccion.setText("Por favor elija la fuente de informacion que va a utilizar");
 
+        btn_Grupo.add(jrb_ArchivosPlanos);
         jrb_ArchivosPlanos.setText("Archivos Planos");
+        jrb_ArchivosPlanos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrb_ArchivosPlanosActionPerformed(evt);
+            }
+        });
 
+        btn_Grupo.add(jrb_BasesDeDatos);
         jrb_BasesDeDatos.setText("Bases de Datos");
 
+        btn_Grupo.add(jrb_XML);
         jrb_XML.setText("XML");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -120,12 +129,17 @@ public class FRM_FuenteInformacion extends javax.swing.JFrame {
         
     }//GEN-LAST:event_formComponentHidden
 
+    private void jrb_ArchivosPlanosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_ArchivosPlanosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrb_ArchivosPlanosActionPerformed
+
     /**
      * @param args the command line arguments
      */
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btn_Grupo;
     private Vista.GUI_BotonesInformacionFuente gUI_BotonesInformacionFuente1;
     private javax.swing.JLabel jl_Bienvenido;
     private javax.swing.JLabel jl_Instruccion;
