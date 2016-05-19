@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Controlador.Controlador_FRM_FuenteInformacion;
 import Controlador.Controlador_FRM_MenuPrincipal;
 
 /**
@@ -19,13 +20,14 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
     
     Controlador_FRM_MenuPrincipal controlador_FRM_MenuPrincipal;
            FRM_FuenteInformacion fuenteInfo;
+           Controlador_FRM_FuenteInformacion fuente;
     public FRM_MenuPrincipal() {
         initComponents();
         this.setLocation(100, 100);
         controlador_FRM_MenuPrincipal = new Controlador_FRM_MenuPrincipal();
-
         agregarEventos();
     }  
+    
     public void agregarEventos()
     {
         this.jm_Salir.addActionListener(controlador_FRM_MenuPrincipal);
@@ -34,7 +36,14 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
         this.jm_Matricula.addActionListener(controlador_FRM_MenuPrincipal);
         this.jm_Usuario.addActionListener(controlador_FRM_MenuPrincipal);
     }
+    
+    public void visible(boolean visible)
+    {
+        if(visible==true);
+        {
 
+        }
+     }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

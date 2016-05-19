@@ -35,8 +35,9 @@ public class Controlador_FRM_MenuPrincipal implements ActionListener{
         usurio= new FRM_MantenimientoUsuario();
         fuenteInfo= new FRM_FuenteInformacion();
         fuenteInfo.setVisible(true);
+        
     }
-    
+ 
     public void actionPerformed(ActionEvent e)
     {
         if(e.getActionCommand().equals("Salir"))

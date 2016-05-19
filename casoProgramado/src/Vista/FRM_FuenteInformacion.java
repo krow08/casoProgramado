@@ -57,6 +57,11 @@ public class FRM_FuenteInformacion extends javax.swing.JFrame {
         gUI_BotonesInformacionFuente1 = new Vista.GUI_BotonesInformacionFuente();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                formComponentHidden(evt);
+            }
+        });
 
         jl_Bienvenido.setText("¡Bienvenido!");
 
@@ -110,6 +115,10 @@ public class FRM_FuenteInformacion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
+        
+    }//GEN-LAST:event_formComponentHidden
 
     /**
      * @param args the command line arguments

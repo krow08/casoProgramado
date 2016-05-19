@@ -16,21 +16,21 @@ import java.awt.event.ActionListener;
 public class Controlador_FRM_FuenteInformacion implements ActionListener {
     FRM_FuenteInformacion fuenteInfo;
     FRM_MenuPrincipal menu;
-    
+    Controlador_FRM_MenuPrincipal controladorMenu;
     public Controlador_FRM_FuenteInformacion(FRM_FuenteInformacion fuenteInfo)
     {
        this.fuenteInfo=fuenteInfo;
     }
-    
     public void actionPerformed(ActionEvent e)
     {
         if(e.getActionCommand().equals("Aceptar"))
         {
-          System.out.println("Aceptar");
+            menu =new FRM_MenuPrincipal();
+            menu.setVisible(true);
         }
         if(e.getActionCommand().equals("Salir"))
         {
-            System.out.println("Salir"); 
+           System.exit(0);
         }
     }
 }
